@@ -1,1 +1,38 @@
 # Group-5---SA-2---Grade-Computation
+print("Hi, Welcome to Pisay's Grading System!")
+
+# formulas for computing
+def compute_current_grade(fa, sa):
+    return (fa * 0.30) + (sa * 0.70)
+
+def compute_final_grade(previous, current):
+    return (previous + (current * 2)) / 3
+
+# functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Asking user for scores
+pervious = float(input("Previous quarter grade: ")
+fa = float(input("Formative Assessment (FA): "))
+sa = float(input("Summative Assesment (SA): "))
+
+current = compute_current_grade(fa, sa)
+final = compute_final_grade(previous, current)
+equivalent, adjective = get_equivalent_and adejctive(final)
+
+print("\n--- RESULT ---")
+print(f"Current Grade: {current:.2f}")
+print(f"Final Grade: {final:.2f}")
+print(f"Equivalent: {Equivalent}")
+print(f"Adjective: {Adjective}")
