@@ -24,16 +24,16 @@ def get_equivalent_and_adjective(grade):
         return 3.00, "NEEDS IMPROVEMENT"
 
 # Asking user for scores
-pervious = float(input("Previous quarter grade: ")
+previous = float(input("Previous quarter grade: "))
 fa = float(input("Formative Assessment (FA): "))
 sa = float(input("Summative Assesment (SA): "))
 
 current = compute_current_grade(fa, sa)
 final = compute_final_grade(previous, current)
-equivalent, adjective = get_equivalent_and adejctive(final)
+equivalent, adjective = get_equivalent_and_adejctive(final)
 
 print("\n--- RESULT ---")
 print(f"Current Grade: {current:.2f}")
 print(f"Final Grade: {final:.2f}")
 print(f"Equivalent: {Equivalent}")
-print(f"Adjective: {Adjective}")
+print(f"Adjective: {adjective}")
