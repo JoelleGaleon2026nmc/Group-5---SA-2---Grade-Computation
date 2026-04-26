@@ -1,14 +1,14 @@
-# Group-5---SA-2---Grade-Computation
 print("Hi, Welcome to Pisay's Grading System!")
 
-# Formulas for computing
+# Compute current (tentative) grade
 def compute_current_grade(fa, sa):
     return (fa * 0.30) + (sa * 0.70)
 
+# Compute final grade (Q2–Q4)
 def compute_final_grade(previous, current):
     return (previous + (current * 2)) / 3
 
- # Grade Equivalent
+# Grade equivalent + remarks
 def get_result_and_equivalent(grade):
     if grade >= 96:
         return 1.00, "EXCELLENT"
@@ -23,17 +23,27 @@ def get_result_and_equivalent(grade):
     else:
         return 3.00, "NEEDS IMPROVEMENT"
 
-# Asking user for scores
-previous = float(input("Previous quarter grade: "))
+# Ask for scores
 fa = float(input("Formative Assessment (FA): "))
-sa = float(input("Summative Assesment (SA): "))
+sa = float(input("Summative Assessment (SA): "))
 
 current = compute_current_grade(fa, sa)
-final = compute_final_grade(previous, current)
-result, equivalent = get_result_and_equivalent(final)
 
+# Ask for previous grade (optional)
+prev_input = input("Previous quarter grade (press Enter if none): ")
+
+if prev_input == "":
+    final = current  # Q1 case
+else:
+    previous = float(prev_input)
+    final = compute_final_grade(previous, current)
+
+# Get equivalent + remarks
+equivalent, remarks = get_result_and_equivalent(final)
+
+# Output
 print("\n--- RESULT ---")
 print(f"Current Grade: {current:.2f}")
 print(f"Final Grade: {final:.2f}")
-print(f"Result: {result}")
-print(f"Equivalent: {equivalent}")
+print(f"Equivalent: {equivalent:.2f}")
+print(f"Remarks: {remarks}")
