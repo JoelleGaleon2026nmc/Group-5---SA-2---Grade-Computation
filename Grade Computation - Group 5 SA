@@ -1,14 +1,14 @@
 # Group-5---SA-2---Grade-Computation
 print("Hi, Welcome to Pisay's Grading System!")
 
-# formulas for computing
+# Formulas for computing
 def compute_current_grade(fa, sa):
     return (fa * 0.30) + (sa * 0.70)
 
 def compute_final_grade(previous, current):
     return (previous + (current * 2)) / 3
 
- # functions from Member 3
+ # Grade Equivalent
 def get_equivalent_and_adjective(grade):
     if grade >= 96:
         return 1.00, "EXCELLENT"
