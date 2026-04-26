@@ -9,7 +9,7 @@ def compute_final_grade(previous, current):
     return (previous + (current * 2)) / 3
 
  # Grade Equivalent
-def get_equivalent_and_adjective(grade):
+def get_result_and_equivalent(grade):
     if grade >= 96:
         return 1.00, "EXCELLENT"
     elif grade >= 90:
@@ -30,10 +30,10 @@ sa = float(input("Summative Assesment (SA): "))
 
 current = compute_current_grade(fa, sa)
 final = compute_final_grade(previous, current)
-equivalent, adjective = get_equivalent_and_adejctive(final)
+result, equivalent = get_result_and_equivalent(final)
 
 print("\n--- RESULT ---")
 print(f"Current Grade: {current:.2f}")
 print(f"Final Grade: {final:.2f}")
-print(f"Equivalent: {Equivalent}")
-print(f"Adjective: {adjective}")
+print(f"Result: {result}")
+print(f"Equivalent: {equivalent}")
