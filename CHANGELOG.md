@@ -5,8 +5,8 @@ DATE: 2024-05-24
 By: Joelle Moriel L. Galeon
 -----------------------------------------------------------
 * Fixed variable name errors and function call typos in the main script.
-* Added input validation (try-except) to prevent errors when typing grades.
-* Formatted the "Result" display for a cleaner user interface.
+* Added input validation to prevent errors when typing grades.
+* Formatted the "Result" display.
 * Combined Member 2’s grading scale and Member 3’s logic into a single working program.
 
 VERSION 1.0.2
