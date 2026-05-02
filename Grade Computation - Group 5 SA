@@ -23,7 +23,7 @@ def get_result_and_equivalent(grade):
     else:
         return 3.00, "NEEDS IMPROVEMENT"
 
-# Ask for scores
+# Ask for grade (Percentage) 
 fa = float(input("Formative Assessment (FA): "))
 sa = float(input("Summative Assessment (SA): "))
 
